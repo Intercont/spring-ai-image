@@ -1,11 +1,12 @@
 package com.igorfragadev.springaiimage.services;
 
-import com.igorfragadev.springaifunctions.model.Answer;
-import com.igorfragadev.springaifunctions.model.Question;
+
+import com.igorfragadev.springaiimage.model.Question;
+import org.springframework.web.multipart.MultipartFile;
 
 public interface OpenAIService {
 
-    Answer getAnswer(Question question);
-    Answer getStockPrice(Question question);
+    byte[] getImage(Question question);
 
+    String getDescription(MultipartFile file);
 }
